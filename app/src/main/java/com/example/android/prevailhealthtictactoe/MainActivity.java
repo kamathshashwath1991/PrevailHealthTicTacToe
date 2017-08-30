@@ -1,5 +1,6 @@
 package com.example.android.prevailhealthtictactoe;
 
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -16,9 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private int[][] winningPositions= {{0,1,2},{3,4,5},{6,7,8}, {0,3,6}, {1,4,7}, {2,5,8}, {0,4,8}, {2,4,6}};// define positions of winning
     private boolean gameIsActive= true;
 
-
-
-    public void dropIn(View view){
+    public void dropCoin(View view){
         ImageView counter= (ImageView) view;
         int imageTapCount= Integer.parseInt(counter.getTag().toString());
 
@@ -90,5 +90,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toast.makeText(MainActivity.this,"This is the new game!", Toast.LENGTH_SHORT).show();
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 }
