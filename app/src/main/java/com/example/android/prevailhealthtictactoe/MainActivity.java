@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private int Player = 0;
     private int[] DefaultGameState={2,2,2,2,2,2,2,2,2};
-    private int[][] winningPositions= {{0,1,2},{3,4,5},{6,7,8}, {0,3,6}, {1,4,7}, {2,5,8}, {0,4,8}, {2,4,6}};// define positions of winning
+    private int[][] winningPositions= {{0,1,2},{3,4,5},{6,7,8}, {0,3,6}, {1,4,7}, {2,5,8}, {0,4,8}, {2,4,6}};
     private boolean gameIsActive= true;
 
     public void dropCoin(View view){
